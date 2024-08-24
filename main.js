@@ -62,3 +62,30 @@ for(const num of numbers){
 }
 
 console.log(resultHC)
+
+/*3 Crear array de elementos separados por espacio */
+const words = "pato perro  aguila    oso gato";
+
+const array = words.replace(/\s+/g, " ").split(" ");
+
+console.log(array)
+
+/* sin funciones de javaScript */
+
+const secondArray = [];
+let w = "";
+
+for(const c of words){
+    if(c !== " "){
+        w += c;
+    }else if(w.length > 0){
+        secondArray[secondArray.length] = w;
+        w = "";
+    }
+}
+
+if(w.length > 0){
+    secondArray[secondArray.length] = w;
+}
+
+console.log(secondArray);
